@@ -1,0 +1,14 @@
+create table Commentaires (
+  id int auto_increment not null primary key,
+  com text not null,
+  datecom  Date NOT NULL DEFAULT '2011-01-26',
+  id_agent int not null,
+  foreign key (id_agent) references agent(id_agent)
+  
+);
+
+
+
+
+ALTER TABLE clients 
+  ADD COLUMN D DATE NOT NULL DEFAULT '2011-01-26' AFTER `AgentID`

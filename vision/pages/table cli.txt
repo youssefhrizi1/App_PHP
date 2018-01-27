@@ -1,0 +1,9 @@
+CREATE TABLE cli (
+    Id_cli int NOT NULL AUTO_INCREMENT,
+    Numbers char(50) NOT NULL,
+    Article char(255) NOT NULL,
+    AgentID int NOT NULL,
+    PRIMARY KEY (Id_cli),
+    CONSTRAINT FK_cli FOREIGN KEY ( AgentID)
+    REFERENCES agent(id_agent)
+);
